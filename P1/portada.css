@@ -1,0 +1,95 @@
+body {
+    background-image: url("img/bg.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+}
+
+
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Para que los elementos se muestren en línea */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-titulo img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.titulo-menu {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+}
+
+h1 {
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+}
+.wrapper > div {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 1em;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.cabecera {
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+
+.auxiliares {
+    grid-column: 1;
+    grid-row: 2 / 5;
+}
+.peliculas {
+    grid-column: 2 / 4;
+    grid-row: 2 / 5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 15px; /* Espaciado entre elementos */
+    padding: 1em;
+}   
+
+/* Estilos para cada elemento dentro de .peliculas */
+.peliculas > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.peliculas img {
+    width: 70px;  /* Adjust this to your preferred size */
+    object-fit: contain; /* Ensures the image is not distorted */
+}
+
+.pie {
+    grid-column: 1 / 4;
+    grid-row: 5;
+}
+
+  
