@@ -1,0 +1,15 @@
+.contenedor{
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.contenedor{
+    border: 100px solid rgb(0, 0, 0);
+    border-radius: 100000px;
+    padding: 1em;
+    color: #ffffff;
+    background-color: rgb(167, 7, 7);
+}
