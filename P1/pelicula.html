@@ -2,29 +2,37 @@
 <html>
     <head>
         <title>UGRFLIX</title>
+        <!-- Enlace al archivo CSS para aplicar estilos -->
         <link rel="stylesheet" type="text/css" href="pelicula.css">
     </head>
     <body>
         <div class="wrapper">
+            
+            <!-- Cabecera con logo y menú de navegación (actualmente oculta en CSS) -->
             <div class="cabecera">
                 <div class="logo-titulo">
+                    <!-- Logo de la plataforma -->
                     <img src="img/vista_movie.ico" alt="Logo UGRFLIX">
                     <div class="titulo-menu">
                         <h1>UGRFLIX</h1>
+                        <!-- Menú de navegación -->
                         <nav> 
                             <ul>
-                                <li> <a href="#">Menú1</a> </li>
-                                <li> <a href="#">Menú2</a> </li>
-                                <li> <a href="#">Menú3</a> </li>
+                                <li> <a href="portada.html">INICIO</a> </li>
+                                <li> <a href="#">PELICULAS</a> </li>
+                                <li> <a href="#">SERIES</a> </li>
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
 
+            <!-- Sección de elementos auxiliares (actualmente oculta en CSS) -->
             <div class="auxiliares"> Elementos Auxiliares</div>
             
-            <div class="peliculas">
+            <!-- Contenedor principal con información de la película -->
+            <div class="pelicula">
+                <!-- Sección de texto con detalles de la película -->
                 <div class="texto">
                     <h2 class="titulo">Título de la Película</h2>
                     <p class="info"><strong>Año:</strong> 2024</p>
@@ -32,6 +40,7 @@
                     <p class="info"><strong>Director:</strong> John Doe</p>
                     <p class="info"><strong>Actores:</strong> Jane Smith, Jack Black</p>
                     <p class="info"><strong>Descripción:</strong></p>
+                    <!-- Descripción de la película con desplazamiento si es necesario -->
                     <div class="descripcion">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis 
                         nunc ut augue volutpat dapibus. Suspendisse potenti. Curabitur vehicula lacus 
@@ -43,16 +52,33 @@
                     </div>
                 </div>
                 
-                
+                <!-- Imágenes relacionadas con la película -->
                 <div class="one"><img src="img/moviemaker.ico" alt="movie1"></div>
                 <div class="two"><img src="img/moviemaker.ico" alt="movie2"></div>
+                
+                <!-- Elementos ocultos en CSS (iconos de redes sociales e impresión) -->
                 <div class="facebook"><img src="img/facebook.webp" alt="movie3"></div>
                 <div class="world"><img src="img/world.webp" alt="movie4"></div>
-                <div class="imprimir"><img src="img/printer.webp" alt="movie5"></div>
+                
+                <!-- Botón de impresión (redirige a una versión imprimible) -->
+                <div class="imprimir">
+                    <a href="pelicula_imprimir.html">
+                        <img src="img/printer.webp" alt="Imprimir">
+                    </a>
+                </div>
             </div>
 
-            <div class="pie">Pie</div>
-            
+            <!-- Pie de página con logo y texto -->
+            <div class="pie">
+                <!-- Logo en el pie de página -->
+                <img class="logo" src="img/vista_movie.ico" alt="Logo UGRFLIX">
+                
+                <!-- Contenedor de texto del pie -->
+                <div class="pie-texto">
+                    <p>Pie</p>
+                    <p class="copyright">© 2025 - Fernando Lanzarot Facio</p>
+                </div>
+            </div>      
         </div>
     </body>
 </html>

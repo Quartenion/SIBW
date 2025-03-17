@@ -2,16 +2,14 @@ body {
     background-image: url("img/bg.jpg"); 
     background-size: cover; 
     background-position: center; 
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
-    font-family: Arial, sans-serif;
+    background-attachment: fixed; /* Fija el fondo al desplazarse */
 }
 
-
 nav ul {
-    list-style-type: none; /* Elimina los puntos de la lista */
+    list-style-type: none; /* Quita los puntos de la lista */
     margin: 0;
     padding: 0;
-    display: flex; /* Para que los elementos se muestren en línea */
+    display: flex; /* Coloca los elementos en línea */
 }
 
 nav ul li {
@@ -21,6 +19,7 @@ nav ul li {
 .logo-titulo {
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .logo-titulo img {
@@ -38,10 +37,13 @@ h1 {
     margin: 0;
 }
 
+/* Contenedor principal con diseño de cuadrícula */
 .wrapper {
     max-width: 940px;
     margin: 0 auto;
+    min-height: 98vh;
 }
+
 .wrapper > div {
     border: 2px solid rgb(0, 0, 0);
     border-radius: 20px;
@@ -49,6 +51,8 @@ h1 {
     color: #000000;
     background-color: rgb(255, 255, 255);
 }
+
+/* Configuración de la cuadrícula principal */
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -56,42 +60,62 @@ h1 {
     grid-auto-rows: minmax(100px, auto);
 }
 
+/* Cabecera ocupa todo el ancho */
 .cabecera {
     grid-column: 1 / 4;
     grid-row: 1;
 }
 
+/* Sección auxiliar en la izquierda */
 .auxiliares {
     grid-column: 1;
     grid-row: 2 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
+/* Sección de películas con diseño en cuadrícula */
 .peliculas {
     grid-column: 2 / 4;
     grid-row: 2 / 5;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 15px; /* Espaciado entre elementos */
+    gap: 15px;
     padding: 1em;
-}   
+    overflow: hidden;
+}
 
-/* Estilos para cada elemento dentro de .peliculas */
+/* Estilos para cada elemento de la sección de películas */
 .peliculas > div {
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid rgb(0, 0, 0);
     padding: 20px;
-    overflow: hidden;
 }
 
 .peliculas img {
-    width: 70px;  /* Adjust this to your preferred size */
-    object-fit: contain; /* Ensures the image is not distorted */
+    width: 70px;
+    object-fit: contain; /* Evita distorsiones en la imagen */
 }
 
+/* Pie de página ocupa todo el ancho */
 .pie {
     grid-column: 1 / 4;
     grid-row: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
 }
 
-  
+/* Estilo del copyright */
+.copyright {
+    font-size: 0.8em;
+    margin-top: 5px;
+    opacity: 0.7;
+}

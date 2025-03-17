@@ -2,15 +2,14 @@ body {
     background-image: url("img/bg.jpg"); 
     background-size: cover; 
     background-position: center; 
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    background-attachment: fixed; /* Fija la imagen de fondo al hacer scroll */
 }
-
 
 nav ul {
     list-style-type: none; /* Elimina los puntos de la lista */
     margin: 0;
     padding: 0;
-    display: flex; /* Para que los elementos se muestren en línea */
+    display: flex; /* Alinea los elementos del menú en línea */
 }
 
 nav ul li {
@@ -20,6 +19,7 @@ nav ul li {
 .logo-titulo {
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .logo-titulo img {
@@ -40,8 +40,10 @@ h1 {
 .wrapper {
     max-width: 940px;
     margin: 0 auto;
-    min-height: 98vh; 
+    min-height: 98vh; /* Asegura que la página ocupe casi toda la altura de la ventana */
 }
+
+/* Estilo general de las secciones */
 .wrapper > div {
     border: 2px solid rgb(0, 0, 0);
     border-radius: 20px;
@@ -49,6 +51,8 @@ h1 {
     color: #000000;
     background-color: rgb(255, 255, 255);
 }
+
+/* Diseño de la cuadrícula principal */
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -56,103 +60,110 @@ h1 {
     grid-auto-rows: minmax(100px, auto);
 }
 
+/* Cabecera con logo y menú */
 .cabecera {
     grid-column: 1 / 4;
     grid-row: 1;
 }
 
+/* Sección de elementos auxiliares */
 .auxiliares {
     grid-column: 1;
     grid-row: 2 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-.peliculas {
+
+/* Contenedor principal de la película */
+.pelicula {
     grid-column: 2 / 4;
     grid-row: 2 / 5;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 15px; /* Espaciado entre elementos */
-    padding: 1em;
+    gap: 15px;
     overflow: hidden;
-}   
+}
 
-/* Estilos para cada elemento dentro de .peliculas */
-.peliculas > div {
+/* Estilos para cada elemento dentro de .pelicula */
+.pelicula > div {
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid rgb(0, 0, 0);
     padding: 20px;
-    
 }
 
-.peliculas img {
-    width: 70px;  /* Adjust this to your preferred size */
-    object-fit: contain; /* Ensures the image is not distorted */
+/* Ajuste de tamaño y contención de imágenes */
+.pelicula img {
+    width: 70px;
+    object-fit: contain;
 }
 
+/* Contenedor de texto con información de la película */
 .texto {
-    flex-direction: column; /* Organiza los elementos en columna */
+    flex-direction: column;
     grid-column: 1 / 3;
     grid-row: 1 / 3;
     box-sizing: border-box;
     text-align: left;
 }
 
+/* Espaciado correcto dentro del texto */
 .texto > * {
     align-self: flex-start; 
 }
 
-/* Título de la película */
+/* Estilo del título de la película */
 .titulo {
     font-size: 1.8em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* Información de la película (Año, Género, etc.) */
+/* Estilos para la información de la película */
 .info {
     font-size: 1em;
     margin: 2px 0;
 }
 
-/* Descripción con scrollbar */
+/* Sección de descripción con scroll si el texto es largo */
 .descripcion {
     font-size: 0.9em;
     line-height: 1.4;
-    max-height: 100px; /* Limita la altura */
-    overflow-y: auto; /* Scroll si el texto es muy largo */
+    max-height: 100px;
+    overflow-y: auto;
     padding: 5px;
     background-color: #ffffff;
     border: 1px solid #ddd;
 }
 
-.one{
-    grid-column: 3;
-    grid-row: 1;
-}
-.two{
-    grid-column: 3;
-    grid-row: 2;
-}
+/* Posicionamiento de imágenes en la cuadrícula */
+.one { grid-column: 3; grid-row: 1; }
+.two { grid-column: 3; grid-row: 2; }
+.facebook { grid-column: 1; grid-row: 5; }
+.world { grid-column: 2; grid-row: 5; }
+.imprimir { grid-column: 3; grid-row: 5; }
 
-.facebook {
-    grid-column: 1;
-    grid-row: 5;
-}
-
-.world {
-    grid-column: 2;
-    grid-row: 5;
-}
-
-.imprimir {
-    grid-column: 3;
-    grid-row: 5;
-}
-
+/* Pie de página */
 .pie {
     grid-column: 1 / 4;
     grid-row: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
 }
 
-  
+/* Estilo del copyright */
+.copyright {
+    font-size: 0.8em;
+    margin-top: 5px;
+    opacity: 0.7;
+}
+
+.logo{
+    display: none;
+}
