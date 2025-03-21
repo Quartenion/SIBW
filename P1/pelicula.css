@@ -27,6 +27,14 @@ nav ul li {
     margin-right: 10px;
 }
 
+.comentarios {
+    align-items: right;
+    justify-content: right;
+    position: absolute;
+    margin-top: 15px;
+    right: 500px;
+}
+
 .titulo-menu {
     font-size: 1.5em;
     font-weight: bold;
