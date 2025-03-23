@@ -4,6 +4,7 @@
         <title>UGRFLIX</title>
         <!-- Enlace al archivo CSS para aplicar estilos -->
         <link rel="stylesheet" type="text/css" href="pelicula.css">
+        <script src="comentarios.js" defer></script>
     </head>
     <body>
         <div class="wrapper">
@@ -24,7 +25,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="comentarios">
+                    <div class="boton_comentarios">
                         <button name="button"><img src="img/chat.png" alt="Comentarios"></button>
                         
                     </div>
@@ -70,6 +71,36 @@
                         <img src="img/printer.webp" alt="Imprimir">
                     </a>
                 </div>
+
+                <div class="seccion-comentarios">
+                    <form id="formulario-comentarios">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="autor" name="name" required>
+                    
+                        <label for="email">E-mail:</label>
+                        <input type="text" id="email" name="email" placeholder="ejemplo@gmail.com" required>
+                    
+                        <label for="comment">Comentario:</label>
+                        <textarea id="comentario" name="comment" placeholder="Escribe un comentario..." required></textarea>
+                    
+                        <button type="button" id="boton-enviar">Enviar</button>
+                    </form>
+                    
+                
+                    <div class="lista-comentarios" id="lista-comentarios">
+                        <div class="comentario">
+                            <p><strong>Autor:</strong> Juan Pérez</p>
+                            <p><strong>Fecha y Hora:</strong> 23/03/2025 14:35</p>
+                            <p>"Me encantó esta película, la historia es increíble y la fotografía espectacular."</p>
+                        </div>
+                        
+                        <div class="comentario">
+                            <p><strong>Autor:</strong> María López</p>
+                            <p><strong>Fecha y Hora:</strong> 23/03/2025 15:12</p>
+                            <p>"Buena película, pero el final me dejó con muchas dudas. ¿Alguien más piensa lo mismo?"</p>
+                        </div>                        
+                    </div>
+                </div>                
             </div>
 
             <!-- Pie de página con logo y texto -->
