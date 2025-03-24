@@ -10,12 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Lista de palabras prohibidas
     const palabrasProhibidas = ["malo", "tonto", "feo", "estúpido", "idiota", "troll", "fake", "inútil", "horrible", "asco"];
 
-    // Ocultar la sección de comentarios al cargar la página
-    seccionComentarios.style.display = "none";
-
     // Mostrar/ocultar sección de comentarios al hacer clic en el botón de comentarios
     botonComentarios.addEventListener("click", function () {
-        seccionComentarios.style.display = (seccionComentarios.style.display === "none") ? "flex" : "none";
+        seccionComentarios.classList.toggle("visible");
     });
 
     // Manejar el clic en el botón "Enviar"
