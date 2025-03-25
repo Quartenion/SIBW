@@ -47,6 +47,11 @@ h1 {
     max-width: 940px;
     margin: 0 auto;
     min-height: 98vh; /* Asegura que la página ocupe casi toda la altura de la ventana */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    grid-auto-rows: minmax(100px, auto);
 }
 
 /* Estilo general de las secciones */
@@ -56,14 +61,6 @@ h1 {
     padding: 1em;
     color: #000000;
     background-color: rgb(255, 255, 255);
-}
-
-/* Diseño de la cuadrícula principal */
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    grid-auto-rows: minmax(100px, auto);
 }
 
 /* Cabecera con logo y menú */
@@ -162,7 +159,7 @@ h1 {
     position: fixed;
     top: 0;
     right: 0;
-    width: 21vw;
+    width: min(30vw, 380px); /* 30% del viewport o máximo 400px */
     height: 100vh;
     background-color: #ffffff;
     border-left: 2px solid #000000;
@@ -261,7 +258,6 @@ h1 {
     color: white;
     padding: 20px;
     border-radius: 10px;
-    z-index: 1000;
     text-align: center;
 }
 
@@ -269,7 +265,7 @@ h1 {
     margin-top: 10px;
     padding: 8px 16px;
     border: none;
-    background: red;
+    background: rgb(56, 141, 16);
     color: white;
     cursor: pointer;
 }

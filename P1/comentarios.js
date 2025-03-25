@@ -7,20 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputComentario = document.getElementById("comentario");
     const commentList = document.getElementById("lista-comentarios");
 
-    // Lista de palabras prohibidas
-    const palabrasProhibidas = ["malo", "tonto", "feo", "estúpido", "idiota", "troll", "fake", "inútil", "horrible", "asco"];
+    const palabrasProhibidas = ["mierda", "joder", "matar", "gilipollas", "idiota", "wtf", "fake", "inútil", "horrible", "censura"];
 
-    // Mostrar/ocultar sección de comentarios al hacer clic en el botón de comentarios
     botonComentarios.addEventListener("click", function () {
         seccionComentarios.classList.toggle("visible");
     });
 
-    // Manejar el clic en el botón "Enviar"
     botonEnviar.addEventListener("click", function () {
         addComment();
     });
 
-    // Detectar y censurar palabras prohibidas en tiempo real
     inputComentario.addEventListener("input", function () {
         let texto = inputComentario.value;
 
@@ -37,25 +33,21 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = inputEmail.value.trim();
         const comentarioTexto = inputComentario.value.trim();
 
-        // Validar que los campos no estén vacíos
         if (autor === "" || email === "" || comentarioTexto === "") {
             mostrarModal("Todos los campos son obligatorios.");
             return;
         }
 
-        // Validar email con regex
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             mostrarModal("Por favor, introduce un e-mail válido.");
             return;
         }
 
-        // Obtener la fecha y hora actual
         const fechaActual = new Date();
         const fechaFormateada = fechaActual.toLocaleDateString();
         const horaFormateada = fechaActual.toLocaleTimeString();
 
-        // Crear el nuevo comentario
         const newComment = document.createElement("div");
         newComment.classList.add("comentario");
         newComment.innerHTML = `
@@ -64,18 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
             <p>"${comentarioTexto}"</p>
         `;
 
-        // Agregar el comentario al principio de la lista
         commentList.prepend(newComment);
-
-        // Limpiar el formulario después de agregar el comentario
-        inputAutor.value = "";
-        inputEmail.value = "";
+        
         inputComentario.value = "";
     }
 
-    // Función para mostrar un diálogo modal de error (máximo uno activo)
     function mostrarModal(mensaje) {
-        // Verificar si ya hay un modal activo
         if (document.querySelector(".modal")) {
             return;
         }
@@ -90,16 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         document.body.appendChild(modal);
 
-        // Cerrar modal al hacer clic en el botón
         document.getElementById("cerrar-modal").addEventListener("click", function () {
             modal.remove();
-        });
-
-        // También cerrar modal si el usuario hace clic fuera de él
-        modal.addEventListener("click", function (event) {
-            if (event.target === modal) {
-                modal.remove();
-            }
         });
     }
 });
