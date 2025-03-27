@@ -27,17 +27,17 @@
 }
 
 .peliculas {
-    display: grid;
+    display: grid !important;
     grid-column: 2/4;
     grid-row: 2/4;
-    grid-template-columns: subgrid; /* Dos columnas */
-    grid-template-rows: auto 1fr; /* La primera fila es automática y la segunda ocupa todo el ancho */
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-template-rows: 1fr 1fr; /* La primera fila es automática y la segunda ocupa todo el ancho */
     gap: 10px;
 }
 
 .descripcion {
-    grid-column: 1;
-    grid-row: 1;
+    grid-column: 0;
+    grid-row: 0;
     background-color: lightblue;
     display: flex;
     justify-content: center;
