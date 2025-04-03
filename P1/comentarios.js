@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let texto = inputComentario.value;
 
         palabrasProhibidas.forEach(palabra => {
-            const regex = new RegExp(`\\b${palabra}\\b`, "gi");
+            const regex = new RegExp(`\\b${palabra}\\b`, "i");
             texto = texto.replace(regex, "*".repeat(palabra.length));
         });
 

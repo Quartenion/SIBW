@@ -19,18 +19,23 @@ nav ul li {
 .logo-titulo {
     display: flex;
     align-items: center;
+    justify-content: start;
     overflow: hidden;
 }
 
 .logo-titulo img {
     width: 100px;
-    margin-right: 10px;
 }
 
 .titulo-menu {
     font-size: 1.5em;
     font-weight: bold;
     color: #000000;
+}
+
+.titulo-menu a {
+    text-decoration: none;
+    color: #0059ff;
 }
 
 h1 {
@@ -62,6 +67,9 @@ h1 {
 
 /* Cabecera ocupa todo el ancho */
 .cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: start;
     grid-column: 1 / 4;
     grid-row: 1;
 }
