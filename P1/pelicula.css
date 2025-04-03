@@ -2,14 +2,14 @@ body {
     background-image: url("img/bg.jpg"); 
     background-size: cover; 
     background-position: center; 
-    background-attachment: fixed; /* Fija la imagen de fondo al hacer scroll */
+    background-attachment: fixed; 
 }
 
 nav ul {
-    list-style-type: none; /* Elimina los puntos de la lista */
+    list-style-type: none; 
     margin: 0;
     padding: 0;
-    display: flex; /* Alinea los elementos del menú en línea */
+    display: flex; 
 }
 
 nav ul li {
@@ -19,19 +19,18 @@ nav ul li {
 .logo-titulo {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: end;
     overflow: hidden;
 }
 
 .logo-titulo img {
     width: 100px;
-    margin-right: 10px;
 }
 
 .boton_comentarios {
     display: flex;
-    justify-content: flex-end; /* Lo empuja a la derecha */
-    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    justify-content: flex-end; 
+    width: 100%; 
 }
 
 .boton_comentarios button {
@@ -41,7 +40,7 @@ nav ul li {
 }
 
 .boton_comentarios button img {
-    width: 100%; /* Ajusta el tamaño según lo necesites */
+    width: 100%; 
     height: auto;
 }
 
@@ -52,6 +51,11 @@ nav ul li {
     color: #000000;
 }
 
+.titulo-menu a {
+    text-decoration: none;
+    color: #0059ff;
+}
+
 h1 {
     margin: 0;
 }
@@ -59,7 +63,7 @@ h1 {
 .wrapper {
     max-width: 940px;
     margin: 0 auto;
-    min-height: 98vh; /* Asegura que la página ocupe casi toda la altura de la ventana */
+    min-height: 98vh; 
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -144,7 +148,6 @@ h1 {
     margin: 2px 0;
 }
 
-/* Sección de descripción con scroll si el texto es largo */
 .descripcion {
     font-size: 0.9em;
     line-height: 1.4;
@@ -156,23 +159,21 @@ h1 {
 }
 
 .facebook, .world, .imprimir {
-    width: 140px; /* Ajusta este valor según el tamaño que prefieras */
+    width: 140px; 
 }
 
 
-/* Posicionamiento de imágenes en la cuadrícula */
 .one { grid-column: 3; grid-row: 1 / 3; }
 .two { grid-column: 3; grid-row: 3 / 5; }
 .facebook { grid-column: 1; grid-row: 5; }
 .world { grid-column: 2; grid-row: 5; }
 .imprimir { grid-column: 3; grid-row: 5; }
 
-/* Estilo de los comentarios */
 .seccion-comentarios {
     position: fixed;
     top: 0;
     right: 0;
-    width: min(30vw, 380px); /* 30% del viewport o máximo 400px */
+    width: min(30vw, 380px); 
     height: 100vh;
     background-color: #ffffff;
     border-left: 2px solid #000000;
@@ -190,15 +191,15 @@ h1 {
 }
 
 .seccion-comentarios h2 {
-    margin-top: 0; /* Evita que tenga margen extra */
+    margin-top: 0; 
     text-align: left;
 }
 
 .seccion-comentarios form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Asegura que los elementos estén alineados a la izquierda */
-    width: 100%; /* Ajusta el formulario al ancho del contenedor */
+    align-items: flex-start; 
+    width: 100%;
 }
 
 .seccion-comentarios label {
@@ -208,16 +209,16 @@ h1 {
 
 .seccion-comentarios input,
 .seccion-comentarios textarea {
-    width: 100%; /* Hace que los campos ocupen el ancho disponible */
+    width: 100%; 
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Evita que el padding aumente el tamaño del input */
+    box-sizing: border-box; 
 }
 
 .seccion-comentarios textarea {
-    resize: vertical; /* Permite que el usuario ajuste la altura */
-    min-height: 100px; /* Altura mínima del área de comentarios */
+    resize: vertical; 
+    min-height: 100px; 
 }
 
 .seccion-comentarios input[type="submit"] {
@@ -235,15 +236,15 @@ h1 {
 }
 
 .lista-comentarios {
-    overflow-y: auto; /* Activa el scroll */
+    overflow-y: auto; 
     overflow-x: hidden;
-    width: 100%; /* Ajusta al ancho del contenedor */
-    max-height: 680px; /* Ajusta según tu diseño */
+    width: 100%; 
+    max-height: 680px; 
     display: flex;
-    flex-direction: column-reverse; /* Los comentarios más nuevos arriba */
+    flex-direction: column-reverse; 
     background: rgb(255, 255, 255);
     word-wrap: break-word;
-    white-space: normal; /* Permite que el texto se ajuste en varias líneas */
+    white-space: normal; 
 }
 
 .comentario {
