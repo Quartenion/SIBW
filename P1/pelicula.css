@@ -17,7 +17,7 @@ nav ul li {
 }
 
 .logo-titulo {
-    display: flex;
+    display: flex;  
     align-items: center;
     justify-content: start;
     overflow: hidden;
@@ -229,7 +229,7 @@ h1 {
     width: 100%; 
     max-height: 680px; 
     display: flex;
-    flex-direction: column-reverse; 
+    flex-direction: column; 
     background: rgb(255, 255, 255);
     word-wrap: break-word;
     white-space: normal; 
