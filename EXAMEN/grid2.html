@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .contenedor{
+                display: grid;
+                grid-template-columns: 3fr 3fr 3fr;
+                grid-template-rows: auto;
+                justify-content: center;
+                align-items: center;
+                background-color: antiquewhite;
+                max-width: 1000px;
+                gap: 10px;
+                margin: auto;
+                padding: 20px;
+            }
+            #a1{
+                background-color: rgb(157, 42, 165);
+                display: flex;
+                justify-content: center;
+            }
+            #a2{
+                background-color: rgb(92, 15, 98);
+                display: flex;
+                justify-content: center;
+            }
+            #a3{
+                background-color: rgb(85, 36, 88);
+                display: flex;
+                justify-content: center;
+            }
+            header{
+                background-color: blueviolet;
+                display: flex;
+                justify-content: center;
+            }
+            footer{
+                background-color: rgb(148, 101, 191);
+                display: flex;
+                justify-content: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>CABECERA</h1>
+        </header>
+        <main class="contenedor">
+            <article id="a1">
+                <h2>Noticia1</h2>
+            </article>
+            <article id="a2">
+                <h2>Noticia2</h2>
+            </article>
+            <article id="a3">
+                <h2>Noticia3</h2>
+            </article>
+        </main>
+        <footer>
+            <p>pie de página con info legal</p>
+        </footer>
+    </body>
+</html>

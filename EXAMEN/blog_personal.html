@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            header{
+                display: flex;
+                justify-content: center;
+                background-color: pink;
+            }
+            footer{
+                display: flex;
+                justify-content: center;
+                background-color: rgb(175, 175, 244);
+            }
+            .contenedor-global{
+                max-width: 800px;
+                margin: auto;
+            }
+            .contenedor {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: antiquewhite;
+                gap: 30px;
+            }
+            nav ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                background-color: rgb(253, 163, 163);
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>CABECERA</h1>
+        </header>
+        <main class="contenedor-global">
+            <section class="contenedor">
+                <article>
+                    <h2>FOTO DE PERFIL</h2>
+                    <img width="150px" alt="imagen perfil">
+                </article>
+                <article>
+                    <h2>NOMBRE + BIBLIOGRAFÍA</h2>
+                    <p>Hola, soy Ángela, estudiante de ingeniería informática</p>
+                </article>
+            </section>
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/">Sobre mí</a></li>
+                    <li><a href="/">Contacto</a></li>
+                </ul>
+            </nav>
+        </main>
+        <footer>
+            <p>pie de página con info legal</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .contenedor{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                max-width: 1000px;
+                background-color: antiquewhite;
+                gap: 20px;
+            }
+            .contenedor h2{
+                flex: 1;
+                padding: 20px;
+                text-align: center;
+            }
+            #noticias{
+                background-color: blue;
+                padding: 20px;
+                align-content: center;
+            }
+            #eventos{
+                background-color: red;
+                padding: 20px;
+                align-content: center;
+            }
+            #contacto{
+                background-color: green;
+                padding: 20px;
+                align-content: center;
+            }
+            header, footer{
+                display: flex;
+                justify-content: center;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>TITULO DEL SITIO</h1>
+        </header>
+        <main class="contenedor">
+            <section>
+                <h2 id="noticias">Noticias</h2>
+            </section>
+            <section>
+                <h2 id="eventos">Eventos</h2>
+            </section>
+            <section>
+                <h2 id="contacto">Contacto</h2>
+            </section>
+        </main>
+        <footer>
+            <p>pie de página con info legal</p>
+        </footer>
+    </body>
+</html>

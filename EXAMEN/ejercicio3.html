@@ -1,0 +1,32 @@
+<!-- Crea una página HTML con: -->
+<!-- 1. Un input de texto donde escribir una tarea -->
+<!-- 2. Un botón con el texto "Añadir tarea" -->
+<!-- 3. Una lista desordenada (<ul>) vacía -->
+<!-- 4. Cuando el usuario pulse el botón: -->
+    <!-- 4.1: Si el campo está vacío, se debe mostrar el mensaje: "Escribe una tarea orimero" -->
+    <!-- 4.2: Si el campo tiene texto, se añade un nuevo <li> a la lista con el contenido del input -->
+    <!-- 4.3: Al añadir una tarea, el campo input debe vaciarse -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <header>
+            <h1>CABECERA</h1>
+        </header>
+        <main>
+            <section>
+                <input type="text" id="tarea">
+            </section>
+            <section>
+                <button type="submit" id="boton">Añadir tarea</button>
+                <ul id = "lista"></ul>
+            </section>
+        </main>
+        <footer>
+            PIE DE PÁGINA
+        </footer>
+        <script src="ejercicio3.js"></script>
+    </body>
+</html>
